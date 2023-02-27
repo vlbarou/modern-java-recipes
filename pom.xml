@@ -12,52 +12,15 @@
   <packaging>pom</packaging>
 
   <organization>
-    <name>Microsoft Corporation</name>
-    <url>https://microsoft.com</url>
+    <name>Aegean University</name>
+    <url>https://www.aegean.gr</url>
   </organization>
 
-  <licenses>
-    <license>
-      <name>MIT License</name>
-      <url>https://opensource.org/licenses/MIT</url>
-      <distribution>repo</distribution>
-    </license>
-  </licenses>
 
-  <scm>
-    <connection>scm:git:${repository.url}</connection>
-    <developerConnection>scm:git:${repository.url}</developerConnection>
-    <url>${repository.url}</url>
-    <tag>gctoolkit-2.0.10</tag>
-  </scm>
-
-  <developers>
-    <developer>
-      <id>microsoft</id>
-      <name>Microsoft Corporation</name>
-    </developer>
-  </developers>
-
-  <issueManagement>
-    <system>GitHub</system>
-    <url>https://github.com/microsoft/gctoolkit/issues</url>
-  </issueManagement>
-
-  <distributionManagement>
-    <snapshotRepository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </snapshotRepository>
-    <repository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-    </repository>
-  </distributionManagement>
 
   <modules>
-
     <module>week-one-basics</module>
-      <module>week-two-functional-interfaces</module>
+    <module>week-two-functional-interfaces</module>
   </modules>
 
   <properties>
@@ -88,17 +51,13 @@
   </dependencyManagement>
 
   <build>
-    <pluginManagement></pluginManagement>
+    <pluginManagement>
 
-    <plugins></plugins>
+    </pluginManagement>
+
+    <plugins>
+
+    </plugins>
 
   </build>
-
-  <reporting>
-
-  </reporting>
-
-  <profiles>
-
-  </profiles>
 </project>
