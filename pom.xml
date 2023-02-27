@@ -1,0 +1,104 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>edu.aegean.epta.java.recipes</groupId>
+  <artifactId>modern-java-recipes</artifactId>
+  <version>1.0</version>
+
+  <name> Epta :: Aegean :: Modern Recipes</name>
+  <description>General Description</description>
+  <url>http://my-site.org</url>
+
+  <packaging>pom</packaging>
+
+  <organization>
+    <name>Microsoft Corporation</name>
+    <url>https://microsoft.com</url>
+  </organization>
+
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>https://opensource.org/licenses/MIT</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <scm>
+    <connection>scm:git:${repository.url}</connection>
+    <developerConnection>scm:git:${repository.url}</developerConnection>
+    <url>${repository.url}</url>
+    <tag>gctoolkit-2.0.10</tag>
+  </scm>
+
+  <developers>
+    <developer>
+      <id>microsoft</id>
+      <name>Microsoft Corporation</name>
+    </developer>
+  </developers>
+
+  <issueManagement>
+    <system>GitHub</system>
+    <url>https://github.com/microsoft/gctoolkit/issues</url>
+  </issueManagement>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <repository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
+
+  <modules>
+
+    <module>week-one-basics</module>
+      <module>week-two-functional-interfaces</module>
+  </modules>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <junit5.version>5.9.1</junit5.version>
+
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>${junit5.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>${junit5.version}</version>
+        <scope>test</scope>
+      </dependency>
+
+
+    </dependencies>
+  </dependencyManagement>
+
+  <build>
+    <pluginManagement></pluginManagement>
+
+    <plugins></plugins>
+
+  </build>
+
+  <reporting>
+
+  </reporting>
+
+  <profiles>
+
+  </profiles>
+</project>
