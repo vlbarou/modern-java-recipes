@@ -10,7 +10,7 @@
     <artifactId>week-one-basics</artifactId>
     <packaging>jar</packaging>
 
-    <name>week-one-basics</name>
+    <name>Epta :: Aegean :: Modern Recipes :: Week One :: Basics</name>
     <url>http://maven.apache.org</url>
 
     <properties>

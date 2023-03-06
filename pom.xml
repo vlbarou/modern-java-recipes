@@ -7,7 +7,6 @@
 
   <name> Epta :: Aegean :: Modern Recipes</name>
   <description>General Description</description>
-  <url>http://my-site.org</url>
 
   <packaging>pom</packaging>
 
@@ -15,7 +14,6 @@
     <name>Aegean University</name>
     <url>https://www.aegean.gr</url>
   </organization>
-
 
 
   <modules>
