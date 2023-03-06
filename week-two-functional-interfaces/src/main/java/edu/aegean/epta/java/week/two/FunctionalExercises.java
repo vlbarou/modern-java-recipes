@@ -1,5 +1,6 @@
 package edu.aegean.epta.java.week.two;
 
+import java.util.function.BiFunction;
 import java.util.function.Function;
 
 public final class FunctionalExercises {
@@ -55,4 +56,49 @@ public final class FunctionalExercises {
 
         return function.apply(word);
     }
+
+    /**
+     * Write a lambda expression that, given two strings, returns the result
+     * of concatenating the first with the second, followed by the
+     * first again.
+     */
+    public static String functionFive(String wordOne, String wordTwo) {
+        // TODO: change here the code.
+        BiFunction<String, String, String> bifunc = null;
+
+        return bifunc.apply(wordOne, wordTwo);
+
+    }
+
+    /**
+     * Write a lambda expression that returns the index of
+     * the first occurrence of the second string within the first string,
+     * or -1 if the second string doesn't occur within the first string.
+     * Hint: // The String method
+     *     public int indexOf(String)
+     *   works as a BiFunction, because the receiver (a String instance)
+     *   counts as the first argument. The argument to indexOf() becomes
+     *   the second argument to the BiFunction.
+     */
+    public static int functionSix(String wordOne, String wordTwo) {
+
+        // TODO: change here the code.
+        BiFunction<String, String, Integer> bifunc = null;
+
+        return bifunc.apply(wordOne, wordTwo);
+
+    }
+
+    /**
+     * Write an unbound method reference that returns the index of
+     * the first occurrence of the second string within the first string,
+     * or -1 if the second string doesn't occur within the first string.
+     */
+    public static int functionSeven(String wordOne, String wordTwo) {
+        // TODO: change here the code.
+        BiFunction<String, String, Integer> bifunc = null;
+
+        return bifunc.apply(wordOne, wordTwo);
+    }
+
 }

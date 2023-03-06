@@ -33,4 +33,27 @@ class FunctionalExercisesTest {
         assertEquals((Integer) 0, functionFour(""));
         assertEquals((Integer) 0, functionFour(null));
     }
+
+    @Test
+    void testFunctionFive() {
+
+        assertEquals("FirstSecondFirst", functionFive("First", "Second"));
+
+    }
+
+    @Test
+    void testFunctionSix() {
+
+        assertEquals(3, functionSix("abcdefghi", "def"));
+        assertEquals(-1, functionSix("abcdefghi", "xyz"));
+    }
+
+    @Test
+    void testFunctionSeven() {
+
+        assertEquals(3, functionSeven("abcdefghi", "def"));
+        assertEquals(-1, functionSeven("abcdefghi", "xyz"));
+    }
+
+
 }
