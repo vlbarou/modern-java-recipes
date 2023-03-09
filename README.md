@@ -7,7 +7,7 @@ The following prerequisites are needed to run and implement exercises:
  * Install OpenJDK 1.17. You can download the jdk from here: https://adoptium.net
  * Install Maven 3.3.0 or higher. You can download maven from here: https://maven.apache.org/download.cgi
  * Github account. 
- * [OpenJDK 17 API Reference:](https://docs.oracle.com/en/java/javase/17/docs/api/)
+ * [OpenJDK 17 API Reference](https://docs.oracle.com/en/java/javase/17/docs/api/)
 
 ## How to submit your exercises
 In order to submit your exercises, you need to fork this repository in a private repository in your github account and 
