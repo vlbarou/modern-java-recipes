@@ -7,7 +7,7 @@ data rather than process it iteratively. Additionally, a presentation of the mos
 `java.util.Stream` interface will be presented.
 
 
-## Exercise One : The `java.util.function.Predicate` functional interface
+## Exercise One : Basic Stream Operations. 
 There is a set of exercises covers simple stream pipelines, in java class `edu.aegean.epta.java.recipes.week.three.BasicStreamsExercises`, 
 including intermediate operations and basic collectors. Some of these exercises use a BufferedReader variable  
 named `reader` that the test has set up for you.
