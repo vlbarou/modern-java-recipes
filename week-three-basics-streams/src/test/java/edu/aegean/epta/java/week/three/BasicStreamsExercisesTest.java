@@ -107,6 +107,22 @@ class BasicStreamsExercisesTest {
 
     }
 
+    @Test
+    void testStringsToCharacters() {
+
+        // arrange
+        List<String> input = List.of("alfa", "bravo", "charlie");
+
+
+        // act
+        var result = stringsToCharacters(input);
+
+        // assert
+        assertEquals("[a, l, f, a, b, r, a, v, o, c, h, a, r, l, i, e]", result.toString());
+        assertTrue(result.stream().allMatch(x -> x instanceof Character));
+
+    }
+
 
 
 // ========================================================

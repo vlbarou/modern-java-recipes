@@ -120,4 +120,17 @@ public final class BasicStreamsExercises {
         return result;
 
     }
+
+    /**
+     * Convert a list of strings into a list of characters.
+     * HINT: Use String.chars() and Stream.flatMap(). Pay attention to the return type of String.chars()
+     * and boxing conversion.
+     */
+    public static List<Character> stringsToCharacters(List<String> words) {
+
+        // TODO: change here the code.
+        List<Character> result = null;
+
+        return result;
+    }
 }
