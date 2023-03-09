@@ -15,14 +15,11 @@ named `reader` that the test has set up for you.
 ## Exercise Two: Questions related to java streams
 Please find below some questions that you need to answer
 
-### Question 1:
+### Question 1:  What is the difference between Collection and Stream? (answer)
+Pleas provid your answer below ... 
+
+### Question 2: What does the filter() method do? when you use it?
 Please provide your answer below ...
 
-### Question 2: What is a Function interface ?
-Please provide your answer below ...
-
-### Question 3: What is a BiFunction interface and when to use it ?
-Please provide your answer below ...
-
-### Question 4: What are different kinds of Method References?
+### Question 3: What do you mean by saying Stream is lazy?
 Please provide your answer below ...
