@@ -17,4 +17,5 @@ constantly**.
 ## Java Session Exercises
  * [Lab 1: Week One - Basics](week-one-basics/README.md) - Java Lambdas and Functional Programming
  * [Lab 2: Week Two - Existing Functional interfaces](week-two-functional-interfaces/README.md) - Java Lambdas and Functional Programming
- * [Lab 2: Week Three - Basic Streams](week-three-basics-streams/README.md) - Java Lambdas and Functional Programming
+ * [Lab 3: Week Three - Basic Streams](week-three-basics-streams/README.md) - Java Lambdas and Functional Programming
+ * [Lab 4: Week Four - Comparators & Collectors](week-four-comparators/README.md) - Comparators and Collectors Exercises
