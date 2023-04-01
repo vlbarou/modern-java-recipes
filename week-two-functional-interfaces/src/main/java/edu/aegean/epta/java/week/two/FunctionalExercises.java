@@ -1,5 +1,6 @@
 package edu.aegean.epta.java.week.two;
 
+import java.util.Objects;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 
@@ -11,7 +12,7 @@ public final class FunctionalExercises {
      */
     public static String functionOne(String word) {
         // TODO: change here the code.
-        Function<String, String> func = null;
+        Function<String, String> func = s -> "(".concat(s).concat(")");
 
         return func.apply(word);
 
@@ -25,7 +26,7 @@ public final class FunctionalExercises {
     public static String functionTwo(String word) {
 
         // TODO: change here the code.
-        Function<String, String> func = null;
+        Function<String, String> func = String::toUpperCase;
 
         return func.apply(word);
     }
@@ -37,7 +38,7 @@ public final class FunctionalExercises {
     public static String functionThree(String word) {
 
         // TODO: change here the code.
-        Function<String, String> func = null;
+        Function<String, String> func = FunctionalExercises::toUpperCase;
 
         return func.apply(word);
     }
@@ -52,7 +53,10 @@ public final class FunctionalExercises {
     public static Integer functionFour(String word) {
 
         // TODO: change here the code.
-        Function<String, Integer> function = null;
+        Function<String, String> applyString = s -> Objects.requireNonNullElse(s, "");
+        Function<String, Integer> getLength = String::length;
+
+        Function<String, Integer> function = applyString.andThen(getLength);
 
         return function.apply(word);
     }
@@ -64,7 +68,7 @@ public final class FunctionalExercises {
      */
     public static String functionFive(String wordOne, String wordTwo) {
         // TODO: change here the code.
-        BiFunction<String, String, String> bifunc = null;
+        BiFunction<String, String, String> bifunc = (w1, w2) -> w1.concat(w2).concat(w1);
 
         return bifunc.apply(wordOne, wordTwo);
 
@@ -83,7 +87,7 @@ public final class FunctionalExercises {
     public static int functionSix(String wordOne, String wordTwo) {
 
         // TODO: change here the code.
-        BiFunction<String, String, Integer> bifunc = null;
+        BiFunction<String, String, Integer> bifunc = String::indexOf;
 
         return bifunc.apply(wordOne, wordTwo);
 
@@ -96,9 +100,16 @@ public final class FunctionalExercises {
      */
     public static int functionSeven(String wordOne, String wordTwo) {
         // TODO: change here the code.
-        BiFunction<String, String, Integer> bifunc = null;
+        BiFunction<String, String, Integer> bifunc = FunctionalExercises::getIndexOfSubStr;
 
         return bifunc.apply(wordOne, wordTwo);
     }
 
+    private static String toUpperCase(String str) {
+        return str.toUpperCase();
+    }
+
+    private static int getIndexOfSubStr(String str, String subStr) {
+        return str.indexOf(subStr);
+    }
 }

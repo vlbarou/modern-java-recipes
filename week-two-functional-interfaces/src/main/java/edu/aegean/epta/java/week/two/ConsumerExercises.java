@@ -13,7 +13,7 @@ public final class ConsumerExercises {
         StringBuilder sb = new StringBuilder(word);
 
         // TODO: change here the code.
-        Consumer<StringBuilder> cons = null;
+        Consumer<StringBuilder> cons = b -> b.append("abc");
 
         cons.accept(sb);
 
@@ -26,7 +26,7 @@ public final class ConsumerExercises {
     public static List<String> consumerTwo(List<String> words) {
 
         // TODO: change here the code.
-        Consumer<List<String>> cons = null;
+        Consumer<List<String>> cons = List::clear;
 
         cons.accept(words);
 
@@ -39,7 +39,7 @@ public final class ConsumerExercises {
     public static List<String> consumerThree(List<String> words) {
 
         // TODO: change here the code.
-        Consumer<List<String>> cons = null;
+        Consumer<List<String>> cons = ConsumerExercises::clearList;
 
         cons.accept(words);
 
@@ -56,10 +56,14 @@ public final class ConsumerExercises {
         Consumer<List<String>> c2 = list -> list.add("second");
 
         // TODO: change here the code.
-        Consumer<List<String>> consumer = null;
+        Consumer<List<String>> consumer = c1.andThen(c2);
 
 
         consumer.accept(words);
         return words;
+    }
+
+    private static void clearList(List list) {
+        list.clear();
     }
 }

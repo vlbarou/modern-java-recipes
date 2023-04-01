@@ -24,7 +24,7 @@ class ConsumerExercisesTest {
         var input = new ArrayList<>(List.of("a", "b", "c"));
 
 
-        //act
+        // act
        var result = consumerTwo(input);
 
         // assert
@@ -38,7 +38,7 @@ class ConsumerExercisesTest {
         var input = new ArrayList<>(List.of("a", "b", "c"));
 
 
-        //act
+        // act
         var result = consumerThree(input);
 
         // assert
@@ -52,7 +52,7 @@ class ConsumerExercisesTest {
         var input = new ArrayList<>(List.of("a", "b", "c"));
 
 
-        //act
+        // act
         var result = consumerFour(input);
 
         // assert

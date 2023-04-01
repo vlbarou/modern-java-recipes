@@ -13,14 +13,18 @@ public final class PalindromeExerciseOne {
         AtomicBoolean isPalindrome = new AtomicBoolean(true);
 
         //HINT: ser forEach method from List interface andd use a Consumer functional interface.
-        for (String value : values) {
-            if (isPalindrome(value)) {
-                System.out.println("String: " + value + " is Palindrome");
+
+        values.forEach(v -> {
+            if (isPalindrome(v)) {
+                System.out.println("String: " + v + " is Palindrome");
             } else {
-                System.out.println("String: '<" + value + ">' is NOT Palindrome");
+                System.out.println("String: '<" + v + ">' is NOT Palindrome");
                 isPalindrome.set(false);
             }
-        }
+        });
+
+        // VLASIS: Second solution below, without the need of AtomicBoolean
+        // return values.stream().allMatch(PalindromeExerciseOne::isPalindrome);
 
         return isPalindrome.get();
     }

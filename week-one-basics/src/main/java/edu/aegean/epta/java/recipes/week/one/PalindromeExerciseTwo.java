@@ -37,10 +37,17 @@ public final class PalindromeExerciseTwo {
 
         static boolean checkPalindrome(String word) {
 
-
             //HINT: Modify the previous implementation.
 
-            return false;
+            StringBuilder sb = new StringBuilder();
+            for (char c : word.toCharArray()) {
+                if (Character.isLetterOrDigit(c)) {
+                    sb.append(c);
+                }
+            }
+            String forward = sb.toString().toLowerCase();
+            String backward = sb.reverse().toString().toLowerCase();
+            return forward.equals(backward);
         }
     }
 }

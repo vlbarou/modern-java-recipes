@@ -1,7 +1,10 @@
 package edu.aegean.epta.java.week.two;
 
 import java.util.*;
+import java.util.function.BiFunction;
 import java.util.stream.Collectors;
+
+import static java.util.stream.Collectors.groupingBy;
 
 public final class DefaultMethodsExercises {
 
@@ -14,8 +17,7 @@ public final class DefaultMethodsExercises {
 
 
         // TODO: change here the code.
-
-
+        words.forEach(sb -> sb.append("new"));
 
         return words;
     }
@@ -28,6 +30,7 @@ public final class DefaultMethodsExercises {
 
         // TODO: change here the code.
 
+        words.removeIf(w -> w.length() % 2 != 0);
 
         return words;
     }
@@ -39,6 +42,7 @@ public final class DefaultMethodsExercises {
     public static List<String> uppercaseAllWords(List<String> words) {
 
         // TODO: change here the code.
+        words.replaceAll(w -> w.toUpperCase());
 
 
         return words;
@@ -54,6 +58,7 @@ public final class DefaultMethodsExercises {
 
         // TODO: change here the code.
 
+        input.forEach((k,v) -> input.put(k, v.append(Integer.valueOf(k))));
 
         return input;
     }
@@ -67,7 +72,7 @@ public final class DefaultMethodsExercises {
     public static Map<Integer, String>replaceMapValues(Map<Integer, String> input) {
 
         // TODO: change here the code.
-
+        input.replaceAll((k,v) -> v + k);
 
 
         return input;
@@ -81,7 +86,10 @@ public final class DefaultMethodsExercises {
     public static Map<Integer, List<String>> mapOfListOfStringsByLength(List<String> words) {
 
         // TODO: change here the code.
-        Map<Integer, List<String>> result = new TreeMap<>();
+        // Vlasis: I used groupingBy
+        Map<Integer, List<String>> result = words
+                .stream()
+                .collect(groupingBy(String::length));
 
         return result;
     }
@@ -97,6 +105,14 @@ public final class DefaultMethodsExercises {
 
         // TODO: change here the code.
         Map<Character, String> result = new TreeMap<>();
+
+        // Vlasis https://nurkiewicz.com/2019/03/mapmerge-one-method-to-rule-them-all.html
+        BiFunction<String, String, String> remappingFunction =
+                (existingValue, newValue) -> existingValue.concat(":").concat(newValue);
+
+        list.forEach(w -> {
+            result.merge(w.charAt(0), w, remappingFunction);
+        });
 
 
         return result;
