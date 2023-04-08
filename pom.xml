@@ -20,6 +20,7 @@
     <module>week-one-basics</module>
     <module>week-two-functional-interfaces</module>
     <module>week-three-basics-streams</module>
+      <module>week-four-comparators</module>
   </modules>
 
   <properties>
