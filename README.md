@@ -19,3 +19,4 @@ constantly**.
  * [Lab 2: Week Two - Existing Functional interfaces](week-two-functional-interfaces/README.md) - Java Lambdas and Functional Programming
  * [Lab 3: Week Three - Basic Streams](week-three-basics-streams/README.md) - Java Lambdas and Functional Programming
  * [Lab 4: Week Four - Comparators & Collectors](week-four-comparators/README.md) - Comparators and Collectors Exercises
+ * [Lab 5: Week Five - Advanced Streams](week-five-advance-streams/README.md) - Advanced Streams operations. 

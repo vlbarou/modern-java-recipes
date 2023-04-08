@@ -21,6 +21,7 @@
     <module>week-two-functional-interfaces</module>
     <module>week-three-basics-streams</module>
       <module>week-four-comparators</module>
+    <module>week-five-advance-streams</module>
   </modules>
 
   <properties>
