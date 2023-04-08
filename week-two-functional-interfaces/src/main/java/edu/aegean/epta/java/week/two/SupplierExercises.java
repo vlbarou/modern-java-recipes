@@ -14,7 +14,7 @@ public final class SupplierExercises {
     public static String supplierOne() {
 
         // TODO: change here the code.
-        Supplier<StringBuilder> sup = null;
+        Supplier<StringBuilder> sup = () -> new StringBuilder("abc");
 
         return sup.get().toString();
     }
@@ -25,7 +25,7 @@ public final class SupplierExercises {
     public static String supplierTwo() {
 
         // TODO: change here the code.
-        Supplier<StringBuilder> sup = null;
+        Supplier<StringBuilder> sup = StringBuilder::new;
 
         return sup.get().toString();
     }
@@ -35,8 +35,10 @@ public final class SupplierExercises {
      */
     public  static String  supplierThree() {
         // TODO: change here the code.
-        Supplier<StringBuilder> sup = null;
+        Supplier<StringBuilder> sup = StringBuilder::new;;
 
         return sup.get().toString();
     }
+
+    private void SupplierExercises() {}
 }

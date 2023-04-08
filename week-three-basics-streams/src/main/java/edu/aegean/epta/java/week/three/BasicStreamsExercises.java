@@ -2,10 +2,13 @@ package edu.aegean.epta.java.week.three;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+
+import static java.util.stream.Collectors.toList;
 
 /**
  * This set of exercises covers simple stream pipelines,
@@ -27,7 +30,11 @@ public final class BasicStreamsExercises {
 
 
         // TODO: change here the code.
-        List<String> result = null;
+        List<String> result = words
+                .stream()
+                .filter(w -> w.length() % 2 != 0)
+                .map(String::toUpperCase)
+                .collect(toList());
 
         return result;
 
@@ -42,7 +49,13 @@ public final class BasicStreamsExercises {
     public static String joinStreamRange(List<String> words) {
 
         // TODO: change here the code.
-        String result = null;
+        String result = words
+                .stream()
+                .limit(5)
+                .skip(2)
+                .map(s -> s.charAt(1))
+                .map(Object::toString)
+                .collect(Collectors.joining(","));
 
         return result;
     }
@@ -58,7 +71,7 @@ public final class BasicStreamsExercises {
     public static long countLinesInFile(BufferedReader reader) throws IOException {
 
         // TODO: change here the code.
-        long count = 0;
+        long count = reader.lines().count();
 
         return count;
     }
@@ -73,7 +86,7 @@ public final class BasicStreamsExercises {
     public static int  findLengthOfLongestLine(BufferedReader reader) throws IOException {
 
         // TODO: change here the code.
-        int longestLength = 0;
+        int longestLength = reader.lines().mapToInt(String::length).max().orElse(0);
 
 
        return longestLength;
@@ -88,7 +101,10 @@ public final class BasicStreamsExercises {
     public static String findLongestLine(BufferedReader reader) throws IOException {
 
         // TODO: change here the code.
-        String longest = null;
+        String longest = reader
+                .lines()
+                .max(Comparator.comparing((String::length)))
+                .orElse("");
 
         return longest;
     }
@@ -101,7 +117,15 @@ public final class BasicStreamsExercises {
     public static List<String> selectLongestWords(List<String> words) {
 
         // TODO: change here the code.
-        List<String> result = null;
+        int maxLength = words
+                .stream()
+                .mapToInt(String::length)
+                .max()
+                .orElse(0);
+        List<String> result = words
+                .stream()
+                .filter(w -> w.length() == maxLength)
+                .collect(toList());
 
         return result;
     }
@@ -115,7 +139,11 @@ public final class BasicStreamsExercises {
     public static List<String> selectByLengthAndPosition(List<String> words) {
 
         // TODO: change here the code.
-        List<String> result = null;
+        IntStream indexes = IntStream.range(0, words.size());
+        List<String> result = indexes
+                .filter(i -> words.get(i).length() > i)
+                .mapToObj(words::get)
+                .collect(toList());
 
         return result;
 
@@ -129,7 +157,11 @@ public final class BasicStreamsExercises {
     public static List<Character> stringsToCharacters(List<String> words) {
 
         // TODO: change here the code.
-        List<Character> result = null;
+        List<Character> result = words
+                .stream()
+                .flatMapToInt(String::chars)
+                .mapToObj(i -> (char) i)
+                .collect(Collectors.toList());
 
         return result;
     }
