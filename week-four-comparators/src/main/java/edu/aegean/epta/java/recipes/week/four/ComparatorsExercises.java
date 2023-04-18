@@ -14,7 +14,7 @@ public final class ComparatorsExercises {
     public static int comparator01(String wordA, String wordB) {
 
         // TODO: change here the code.
-        Comparator<String> compareByLength = null;
+        Comparator<String> compareByLength = Comparator.comparingInt(String::length);
 
         return compareByLength.compare(wordA, wordB);
     }
@@ -29,7 +29,8 @@ public final class ComparatorsExercises {
     public static int  comparator02(String wordA, String wordB) {
 
         // TODO: change here the code.
-        Comparator<String> compareByLengthThenAlphabetical = null;
+        Comparator<String> compareByLengthThenAlphabetical = Comparator.comparingInt(String::length)
+                .thenComparing(String::compareTo);
 
         return compareByLengthThenAlphabetical.compare(wordA, wordB);
     }
@@ -44,7 +45,7 @@ public final class ComparatorsExercises {
     public static int comparator03(Person personA, Person personB) {
 
         // TODO: change here the code.
-        Comparator<Person> comparebyLastName = null;
+        Comparator<Person> comparebyLastName = Comparator.comparing(Person::getLastName);
 
         return comparebyLastName.compare(personA, personB);
     }
@@ -57,7 +58,8 @@ public final class ComparatorsExercises {
     public static int comparator04(Person personA, Person personB) {
 
         // TODO: change here the code.
-        Comparator<Person> comparebyLastNameThenFirstName = null;
+        Comparator<Person> comparebyLastNameThenFirstName = Comparator.comparing(Person::getLastName)
+                .thenComparing(Person::getFirstName);
 
 
         return  comparebyLastNameThenFirstName.compare(personA, personB);
@@ -75,7 +77,10 @@ public final class ComparatorsExercises {
     public static int comparator05(Person personA, Person personB) {
 
         // TODO: change here the code.
-        Comparator<Person> comparebyLastNameThenFirstNameReversed = null;
+        Comparator<Person> comparebyLastNameThenFirstNameReversed = Comparator
+                .comparing(Person::getLastName)
+                .thenComparing(Person::getFirstName)
+                .reversed();
 
         return comparebyLastNameThenFirstNameReversed.compare(personA, personB);
 
@@ -91,7 +96,11 @@ public final class ComparatorsExercises {
 
 
         // TODO: change here the code.
-        Comparator<Person> comparebyLastNameThenFirstNameWithNull = null;
+        Comparator<Person> comparebyLastNameThenFirstNameWithNull = Comparator
+                .nullsLast(Comparator
+                        .comparing(Person::getLastName)
+                        .thenComparing(Person::getFirstName)
+                );
 
         return comparebyLastNameThenFirstNameWithNull.compare(personA, personB);
 
@@ -105,8 +114,7 @@ public final class ComparatorsExercises {
     public static int comparator07(Person personA, Person personB) {
 
         // TODO: change here the code.
-        Comparator<Person> comparebyAge = null;
-
+        Comparator<Person> comparebyAge = Comparator.comparingInt(Person::getAge);
         return comparebyAge.compare(personA, personB);
     }
 
@@ -121,7 +129,7 @@ public final class ComparatorsExercises {
     public static int  comparator08(int valueA, int valueB) {
 
         // TODO: change here the code.
-        IntBinaryOperator intCompare = null;
+        IntBinaryOperator intCompare = (v1, v2) -> (v1 == v2) ? 0 : (v1 > v2)? 1 : -1;
 
         return intCompare.applyAsInt(valueA, valueB);
     }
@@ -135,7 +143,7 @@ public final class ComparatorsExercises {
     public static int comparator09(int valueA, int valueB) {
 
         // TODO: change here the code.
-        IntBinaryOperator intCompare = null;
+        IntBinaryOperator intCompare = Integer::compare;
 
         return intCompare.applyAsInt(valueA, valueB);
     }
@@ -157,7 +165,7 @@ public final class ComparatorsExercises {
     public static double comparator10(double valueA, double valueB) {
 
         // TODO: change here the code.
-        DoubleToIntBiFunction doubleCompare = null;
+        DoubleToIntBiFunction doubleCompare = Double::compare;
 
         return doubleCompare.applyAsInt(valueA, valueB);
 
